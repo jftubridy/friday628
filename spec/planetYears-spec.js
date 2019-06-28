@@ -1,3 +1,9 @@
+When a user submits their birthday, calculate their age.
+  example input: 2000, 01(month), 01(day)
+  example output: newAge = 19, //5 months, 6 days; try not to use
+
+
+
 When a user submits their age, return their age in mercuryYears
   example input: 50
   example output: (50/.24)=208.3 in mercuryYears
