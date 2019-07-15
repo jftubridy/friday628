@@ -1,10 +1,12 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+const loadGoogleMapsApi = require('load-google-maps-api')
 
 module.exports = {
-  entry: ['./src/main.js'],
+  entry: './src/main.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -16,8 +18,10 @@ module.exports = {
   plugins: [
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
+    new Dotenv(),
+
     new HtmlWebpackPlugin({
-      title: 'friday628',
+      title: 'foodFinder',      //
       template: './src/index.html',
       inject: 'body'
     })
@@ -34,10 +38,21 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: [
-                /node_modules/,
-                /spec/
-              ],
+          /node_modules/,
+          /spec/
+        ],
         loader: "eslint-loader"
+      },
+      {
+        test: /\.js$/,
+        exclude: [
+          /node_modules/,
+          /spec/
+        ],
+        loader: "babel-loader",
+        options: {
+          presets: ['es2015']
+        }
       }
     ]
   }

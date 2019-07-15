@@ -1,21 +1,23 @@
 //-------FRONT END
 
-import { TellingTime } from './Time.js';
-import './styles.css';
-
-
+import $ from "jquery";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles.css";
+import { subtractDate, SolarAges } from './planetYears.js';
 
 $(document).ready(function() {
 
+  $("form#submit").submit(function(event) {
+    event.preventDefault();
 
+    let inputtedMonth = parseInt($("#month")).val();
+    let inputtedDay = parseInt($("#day")).val();
+    let inputtedYear = parseInt($("#year")).val();
+    let inputtedBday = new Date (inputtedYear, inputtedMonth, inputtedDay)
+    let earthAge = subtractDate(inputtedBday);
+    let lifeExpectancy = 80;
 
-    $("#submit").click(function(event) {
-      event.preventDefault();
-
-    let inputtedMonth = $("#month").val();
-    let inputtedDay = $("#day").val();
-    let inputtedYear = $("#year").val();
-
-    $("#demo4").text(TellingTime(inputtedYear, inputtedMonth, inputtedDay));
+    // $("#demo4").text(TellingTime(inputtedYear, inputtedMonth, inputtedDay));
   });
 });
