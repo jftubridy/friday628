@@ -1,8 +1,8 @@
-//-----BACK END
 export function subtractDate(inputtedBday){
   const currentYear = new Date().getFullYear();
-  return currentYear - inputtedBday.getFullYear();
   console.log(currentYear);
+  return currentYear - (inputtedBday.getFullYear());
+  console.log(subtractDate);
 }
 
 export class SolarAges {
@@ -14,7 +14,7 @@ export class SolarAges {
     this.jupiterYears = (earthAge / 11.86).toFixed(2);
 console.log("earthAge " + earthAge);
   }
-
+}
   lifeExpectancy() {
     this.earthExpect = 80;
     this.mercuryExpect = (80 / .24).toFixed(2);
@@ -24,10 +24,10 @@ console.log("earthAge " + earthAge);
   }
 
   yearsLeft() {
-    this.earthLeft = (this.earthExpect - this.earthAge);
-    this.mercuryLeft = (this.mercuryExpect - this.mercuryYears);
-    this.venusLeft = (this.venusExpect - this.venusYears);
-    this.marsLeft = (this.marsExpect - this.marsYears);
-    this.jupiterLeft = (this.jupiterExpect - this.jupiterYears);
+    this.earthLeft = (this.earthExpect - this.earthAge).toFixed(2);
+    this.mercuryLeft = (this.mercuryExpect - this.mercuryYears).toFixed(2);
+    this.venusLeft = (this.venusExpect - this.venusYears).toFixed(2);
+    this.marsLeft = (this.marsExpect - this.marsYears).toFixed(2);
+    this.jupiterLeft = (this.jupiterExpect - this.jupiterYears).toFixed(2);
   }
 }
