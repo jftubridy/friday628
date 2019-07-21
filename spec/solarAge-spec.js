@@ -5,14 +5,20 @@ import { UserAges } from './../src/planetYears.js';
 
 describe('UserAges', function () {
 
-  var bDay = new Date(1988, 9, 2);
+  var bDay = new Date(2000, 2, 2);
   let ages = new UserAges(bDay);
-  let earthAge = ages.userAge.toString();
+  let currentYear = new Date().getFullYear();
+  let userYear = ages.bDay.getFullYear();
+  let earthAge = currentYear - userYear;
+  //let earthAge = ages.userAge;
+  
   it('should return ages year', function() {
-
-    expect(ages.bDay.getFullYear()).toEqual(1988);
+    expect(ages.bDay.getFullYear()).toEqual(2000);
   });
 
+  it('should return earthAge', function() {
+    expect(earthAge).toEqual(19);
+  }); 
 
 
 });
