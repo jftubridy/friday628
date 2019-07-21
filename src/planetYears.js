@@ -14,10 +14,10 @@ export class UserAges {  // asigned but not used
   }
 
   userAge(){
-  let currentYear = new Date().getFullYear();
-  let userYear = this.bDay.getFullYear();
-  let earthAge = userYear - currentYear;
-  return earthAge;
+    let currentYear = new Date().getFullYear();
+    let userYear = this.bDay.getFullYear();
+    let earthAge = userYear - currentYear;
+    return earthAge;
   }
 
   solarAges(){
@@ -42,6 +42,6 @@ export class UserAges {  // asigned but not used
     this.venusLeft = (this.venusExpect - this.venusYears);
     this.marsLeft = (this.marsExpect - this.marsYears);
     this.jupiterLeft = (this.jupiterExpect - this.jupiterYears);
-          //removed the .toFIxed(2) from the end of these.
+    //removed the .toFIxed(2) from the end of these.
   }
 }
