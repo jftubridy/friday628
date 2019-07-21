@@ -15,16 +15,16 @@ export class UserAges {  // asigned but not used
 
   userAge(){
   let currentYear = new Date().getFullYear();
-  let userAge = bDay.getFullYear();
+  let userAge = this.bDay.getFullYear();
   let earthAge = userAge - currentYear;
   return earthAge;
   }
 
   solarAges(){
-    this.mercuryYears = (earthAge / .24).toFixed(2);
-    this.venusYears = (earthAge / .62).toFixed(2);
-    this.marsYears = (earthAge / 1.88).toFixed(2);
-    this.jupiterYears = (earthAge / 11.86).toFixed(2);
+    this.mercuryYears = (this.earthAge / .24).toFixed(2);
+    this.venusYears = (this.earthAge / .62).toFixed(2);
+    this.marsYears = (this.earthAge / 1.88).toFixed(2);
+    this.jupiterYears = (this.earthAge / 11.86).toFixed(2);
 
   }
 
@@ -37,10 +37,11 @@ export class UserAges {  // asigned but not used
   }
 
   yearsLeft() {
-    this.earthLeft = (this.earthExpect - this.earthAge).toFixed(2);
-    this.mercuryLeft = (this.mercuryExpect - this.mercuryYears).toFixed(2);
-    this.venusLeft = (this.venusExpect - this.venusYears).toFixed(2);
-    this.marsLeft = (this.marsExpect - this.marsYears).toFixed(2);
-    this.jupiterLeft = (this.jupiterExpect - this.jupiterYears).toFixed(2);
+    this.earthLeft = (this.earthExpect - this.earthAge);
+    this.mercuryLeft = (this.mercuryExpect - this.mercuryYears);
+    this.venusLeft = (this.venusExpect - this.venusYears);
+    this.marsLeft = (this.marsExpect - this.marsYears);
+    this.jupiterLeft = (this.jupiterExpect - this.jupiterYears);
+          //removed the .toFIxed(2) from the end of these.
   }
 }

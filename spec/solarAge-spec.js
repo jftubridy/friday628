@@ -8,11 +8,13 @@ describe('UserAges', function () {
 
 
   it('should return user age', function() {
-      let inputtedMonth = 3;
-      let inputtedDay = 12;
-      let inputtedYear = 1999;
-      
-      expect(UserAges.userAge).toEqual(20);
+var bDay = new Date(1988, 9, 2);
+let userAges = new UserAges(bDay)
+      // let inputtedMonth = 03;
+      // let inputtedDay = 12;
+      // let inputtedYear = 1999;
+      //console.log("bDay:  "+bDay);
+      expect(userAges.userAge).toEqual(30);
 
 })
 });
