@@ -20,5 +20,11 @@ describe('UserAges', function () {
     expect(earthAge).toEqual(19);
   }); 
 
+  it('should return the correct mercuryYears', function() {
+    let mercuryYears = parseInt(ages.mercuryYears);
+    expect(mercuryYears).toEqual(earthAge / .24);
+  });
+  
+
 
 });

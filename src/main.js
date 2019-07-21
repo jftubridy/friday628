@@ -22,5 +22,6 @@ $(document).ready(function() {
     $("#displayAge").text(earthAge);
 
     $("#demo4").text(ages);
+    $("#mercuryStuff").text(ages.mercuryYears());
   });
 });
