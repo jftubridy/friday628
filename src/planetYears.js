@@ -24,22 +24,58 @@ export class UserAges {  // asigned but not used
     let mercuryYears = this.userAge() / .24;
     return mercuryYears;
   }
+
+  venusYears(){
+    let venusYears = this.userAge() /.62;
+    return venusYears;
+  }
   
-  solarAges(){
-    this.mercuryYears = (this.earthAge / .24);
-    this.venusYears = (this.earthAge / .62);
-    this.marsYears = (this.earthAge / 1.88);
-    this.jupiterYears = (this.earthAge / 11.86);
-
+  marsYears(){
+    let marsYears = this.userAge() / 1.88;
+    return marsYears;
   }
 
-  lifeExpectancy() {
-    this.earthExpect = 80;
-    this.mercuryExpect = (80 / .24);
-    this.venusExpect = (80 / .62);
-    this.marsExpect = (80 / 1.88);
-    this.jupiterExpect = (80 / 11.86);
+  jupiterYears() {
+    let jupiterYears = this.userAge() / 11.86;
+    return jupiterYears;
+  }  
+
+  // solarAges(){
+  //   let mercuryYears = (this.earthAge / .24);
+  //   let venusYears = (this.earthAge / .62);
+  //   let marsYears = (this.earthAge / 1.88);
+  //   let jupiterYears = (this.earthAge / 11.86);
+  //   return mercuryYears, venusYears, marsYears, jupiterYears;
+  // } can't return just one.
+  cont earthExpect = 80;
+
+  mercuryExpect() {
+    let mercuryExpect = earthExpect / .24;
+    return mercuryExpect;
   }
+
+  venusExpect() {
+    let venusExpect = earthExpect / .62;
+    return venusExpect;
+  }
+  
+  marsExpect() {
+    let marsExpect = earthExpect / 1.88;
+    return marsExpect;
+  }
+  
+  jupiterExpect() {
+    let jupiterExpect = earthExpect / 11.86;
+    return jupiterExpect;
+  }
+  
+  // lifeExpectancy() {
+  //   this.earthExpect = 80;
+  //   this.mercuryExpect = (80 / .24);
+  //   this.venusExpect = (80 / .62);
+  //   this.marsExpect = (80 / 1.88);
+  //   this.jupiterExpect = (80 / 11.86);
+  // }
 
   yearsLeft() {
     this.earthLeft = (this.earthExpect - this.earthAge);
