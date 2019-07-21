@@ -1,12 +1,18 @@
-import { subtractDate, SolarAges } from './../src/planetYears.js'
+import { UserAges } from './../src/planetYears.js'
 
 
 
 
-describe('SolarAges', function() {
+describe('UserAges', function () {
+
+
+
   it('should return user age', function() {
-    let earthAge = 20
-    expect(this.mercuryAge).toFixed(2).toEqual(83.33)
+      let inputtedMonth = 3;
+      let inputtedDay = 12;
+      let inputtedYear = 1999;
+      
+      expect(UserAges.userAge).toEqual(20);
 
-});
+})
 });

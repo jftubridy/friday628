@@ -4,7 +4,7 @@ import $ from "jquery";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
-import { subtractDate, SolarAges } from './planetYears.js';
+import { UserAges } from './planetYears.js'; //asigned but not used
 
 $(document).ready(function() {
 
@@ -14,9 +14,9 @@ $(document).ready(function() {
     let inputtedMonth = parseInt($("#month")).val();
     let inputtedDay = parseInt($("#day")).val();
     let inputtedYear = parseInt($("#year")).val();
-    let inputtedBday = new Date (inputtedYear, inputtedMonth, inputtedDay)
-    let earthAge = subtractDate(inputtedBday);
-    let lifeExpectancy = 80;
+    let bDay = new Date (inputtedYear, inputtedMonth, inputtedDay);
+    //let lifeExpectancy = 80;  //asigned a value but never used
+    let userAges = new UserAges(bDay) //user is given value, never used, User is not defined
 
     // $("#demo4").text(TellingTime(inputtedYear, inputtedMonth, inputtedDay));
   });

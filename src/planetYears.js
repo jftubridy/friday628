@@ -1,20 +1,31 @@
-export function subtractDate(inputtedBday){
-  const currentYear = new Date().getFullYear();
-    console.log(currentYear);
-    console.log(subtractDate);
-  return currentYear - (inputtedBday.getFullYear());
-  
-}
+// export function subtractDate(){
+//     const currentYear = new Date().getFullYear();
+//     let userAge = inputtedBday.getFullYear(); //inputtedBday is not defined
+//     let earthAge = userAge - currentYear;
+//
+//   return earthAge;
+// }
 
-export class SolarAges {
-  constructor(earthAge) {
-    this.earthAge = earthAge;
+
+
+export class UserAges {  // asigned but not used
+  constructor(bDay) {
+    this.bDay = bDay;
+  }
+
+  userAge(){
+  let currentYear = new Date().getFullYear();
+  let userAge = bDay.getFullYear();
+  let earthAge = userAge - currentYear;
+  return earthAge;
+  }
+
+  solarAges(){
     this.mercuryYears = (earthAge / .24).toFixed(2);
     this.venusYears = (earthAge / .62).toFixed(2);
     this.marsYears = (earthAge / 1.88).toFixed(2);
     this.jupiterYears = (earthAge / 11.86).toFixed(2);
 
-    console.log("earthAge " + earthAge);
   }
 
   lifeExpectancy() {
