@@ -15,8 +15,8 @@ export class UserAges {  // asigned but not used
 
   userAge(){
   let currentYear = new Date().getFullYear();
-  let userAge = this.bDay.getFullYear();
-  let earthAge = userAge - currentYear;
+  let userYear = this.bDay.getFullYear();
+  let earthAge = userYear - currentYear;
   return earthAge;
   }
 
