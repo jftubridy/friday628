@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
-const loadGoogleMapsApi = require('load-google-maps-api')
 
 module.exports = {
   entry: './src/main.js',
@@ -21,7 +20,7 @@ module.exports = {
     new Dotenv(),
 
     new HtmlWebpackPlugin({
-      title: 'foodFinder',      //
+      title: 'foodFinder',      
       template: './src/index.html',
       inject: 'body'
     })

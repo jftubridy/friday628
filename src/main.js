@@ -18,6 +18,8 @@ $(document).ready(function() {
     let bDay = new Date (inputtedYear, inputtedMonth, inputtedDay);
     //let lifeExpectancy = 80;  //asigned a value but never used
     let ages = new UserAges(bDay); //user is given value, never used, User is not defined
+    let earthAge = ages.userAge();
+    $("#displayAge").text(earthAge);
 
     $("#demo4").text(ages);
   });
