@@ -20,6 +20,11 @@ export class UserAges {  // asigned but not used
     return earthAge;
   }
 
+  mercuryYears(){
+    let mercuryYears = this.userAge() / .24;
+    return mercuryYears;
+  }
+  
   solarAges(){
     this.mercuryYears = (this.earthAge / .24);
     this.venusYears = (this.earthAge / .62);
