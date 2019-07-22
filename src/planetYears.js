@@ -1,12 +1,3 @@
-// export function subtractDate(){
-//     const currentYear = new Date().getFullYear();
-//     let userAge = inputtedBday.getFullYear(); //inputtedBday is not defined
-//     let earthAge = userAge - currentYear;
-//
-//   return earthAge;
-// }   couldn't import both for some reason
-
-
 
 export class UserAges {  // asigned but not used warning.
   constructor(bDay) {
@@ -39,35 +30,35 @@ export class UserAges {  // asigned but not used warning.
     let jupiterYears = this.userAge() / 11.86;
     return jupiterYears;
   }  
-
+  // ---------  don't know how to call just one, but this would be dryer.
   // solarAges(){
   //   let mercuryYears = (this.earthAge / .24);
   //   let venusYears = (this.earthAge / .62);
   //   let marsYears = (this.earthAge / 1.88);
   //   let jupiterYears = (this.earthAge / 11.86);
   //   return mercuryYears, venusYears, marsYears, jupiterYears;
-  // }  don't know how to call just one, but this would be dryer.
+  // }
 
 
-  mercuryExpect() {
-    let mercuryExpect = 80 / .24;
-    return mercuryExpect;
-  }
+  // mercuryExpect() {
+  //   let mercuryExpect = 80 / .24;
+  //   return mercuryExpect;
+  // }
 
-  venusExpect() {
-    let venusExpect = 80 / .62;
-    return venusExpect;
-  }
+  // venusExpect() {
+  //   let venusExpect = 80 / .62;
+  //   return venusExpect;
+  // }
   
-  marsExpect() {
-    let marsExpect = 80 / 1.88;
-    return marsExpect;
-  }
+  // marsExpect() {
+  //   let marsExpect = 80 / 1.88;
+  //   return marsExpect;
+  // }
   
-  jupiterExpect() {
-    let jupiterExpect = 80 / 11.86;
-    return jupiterExpect;
-  }
+  // jupiterExpect() {
+  //   let jupiterExpect = 80 / 11.86;
+  //   return jupiterExpect;
+  // }
   
   // lifeExpectancy() {
   //   this.earthExpect = 80;

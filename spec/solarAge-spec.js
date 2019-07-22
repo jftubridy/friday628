@@ -66,23 +66,23 @@ describe('UserAges', function () {
   });
     
   it('Should show remaining years left on mercury', function() { //12
-    let mercuryLeft = ages.mercuryExpect - earthAge;
-    return mercuryLeft;
+    let mercuryLeft = ages.mercuryExpect() - ages.mercuryYears();
+    expect(mercuryLeft).toEqual(256.166666666666666666);
   });
       
   it('Should show remaining years left on venus', function() { //13
-    let venusLeft = ages.venusExpect - earthAge;
-    return venusLeft;
+    let venusLeft = ages.venusExpect() - ages.venusYears();
+    expect(venusLeft).toEqual();
   });
       
   it('Should show remaining years left on mars', function() { //14
-    let marsLeft = ages.marsExpect - earthAge;
-    return marsLeft;
+    let marsLeft = ages.marsExpect() - ages.marsYears();
+    expect(marsLeft).toEqual();
   });
       
   it('Should show remaining years left on jupiter', function() { //15
-    let jupiterLeft = ages.jupiterExpect - earthAge;
-    return jupiterLeft;
+    let jupiterLeft = ages.jupiterExpect() - ages.jupterYears();
+    expect(jupiterLeft).toEqual();
   });
   
 });
