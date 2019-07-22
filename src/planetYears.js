@@ -4,17 +4,17 @@
 //     let earthAge = userAge - currentYear;
 //
 //   return earthAge;
-// }
+// }   couldn't import both for some reason
 
 
 
-export class UserAges {  // asigned but not used
+export class UserAges {  // asigned but not used warning.
   constructor(bDay) {
     this.bDay = bDay;
   }
 
   userAge(){
-    let currentYear = new Date().getFullYear();
+    let currentYear = new Date().getFullYear();  
     let userYear = this.bDay.getFullYear();
     let earthAge = currentYear - userYear;
     return earthAge;
@@ -46,26 +46,26 @@ export class UserAges {  // asigned but not used
   //   let marsYears = (this.earthAge / 1.88);
   //   let jupiterYears = (this.earthAge / 11.86);
   //   return mercuryYears, venusYears, marsYears, jupiterYears;
-  // } can't return just one.
-  cont earthExpect = 80;
+  // }  don't know how to call just one, but this would be dryer.
+
 
   mercuryExpect() {
-    let mercuryExpect = earthExpect / .24;
+    let mercuryExpect = 80 / .24;
     return mercuryExpect;
   }
 
   venusExpect() {
-    let venusExpect = earthExpect / .62;
+    let venusExpect = 80 / .62;
     return venusExpect;
   }
   
   marsExpect() {
-    let marsExpect = earthExpect / 1.88;
+    let marsExpect = 80 / 1.88;
     return marsExpect;
   }
   
   jupiterExpect() {
-    let jupiterExpect = earthExpect / 11.86;
+    let jupiterExpect = 80 / 11.86;
     return jupiterExpect;
   }
   
@@ -76,7 +76,10 @@ export class UserAges {  // asigned but not used
   //   this.marsExpect = (80 / 1.88);
   //   this.jupiterExpect = (80 / 11.86);
   // }
-
+  earthLeft(){
+    let earthLeft = ages.earthExpect - ages.earthAge;
+    return earthLeft
+  }
   yearsLeft() {
     this.earthLeft = (this.earthExpect - this.earthAge);
     this.mercuryLeft = (this.mercuryExpect - this.mercuryYears);

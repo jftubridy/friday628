@@ -44,4 +44,45 @@ describe('UserAges', function () {
     let mercuryExpect = ages.mercuryExpect();
     expect(mercuryExpect).toEqual(80 / .24);
   });
+
+  it('should show expected lifetime on venus', function() { //8
+    let venusExpect = ages.venusExpect();
+    expect(venusExpect).toEqual(80 / .62);
+  });
+
+  it('should show expected lifetime on mars', function() { //9
+    let marsExpect = ages.marsExpect();
+    expect(marsExpect).toEqual(80 / 1.88);
+  });
+  
+  it('should show expected lifetime on jupiter', function() { //10
+    let jupiterExpect = ages.jupiterExpect();
+    expect(jupiterExpect).toEqual(80 / 11.86);
+  });
+  
+  it('Should show remaining years left on earth', function() { //11
+    let earthLeft = 80 - earthAge;
+    expect(earthLeft).toEqual(61);
+  });
+    
+  it('Should show remaining years left on mercury', function() { //12
+    let mercuryLeft = ages.mercuryExpect - earthAge;
+    return mercuryLeft;
+  });
+      
+  it('Should show remaining years left on venus', function() { //13
+    let venusLeft = ages.venusExpect - earthAge;
+    return venusLeft;
+  });
+      
+  it('Should show remaining years left on mars', function() { //14
+    let marsLeft = ages.marsExpect - earthAge;
+    return marsLeft;
+  });
+      
+  it('Should show remaining years left on jupiter', function() { //15
+    let jupiterLeft = ages.jupiterExpect - earthAge;
+    return jupiterLeft;
+  });
+  
 });

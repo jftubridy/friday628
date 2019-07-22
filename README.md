@@ -16,7 +16,7 @@ This is a website to calculate your age on another planet in our solar system, a
 2. Open index.html in a web browser.
 
 ## Known Bugs
-* It does not work at this time.
+* The index page does not link up with js, it is just for testing karma.
 
 ## Technologies Used
 * HTML
