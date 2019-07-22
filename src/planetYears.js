@@ -62,15 +62,27 @@ export class UserAges {  // asigned but not used warning.
   
   //solar time left
   earthLeft(){
-    let earthLeft = ages.earthExpect - ages.earthAge;
-    return earthLeft
+    let earthLeft = 80 - this.userAge;
+    return earthLeft;
   }
-  yearsLeft() {
-    this.earthLeft = (this.earthExpect - this.earthAge);
-    this.mercuryLeft = (this.mercuryExpect - this.mercuryYears);
-    this.venusLeft = (this.venusExpect - this.venusYears);
-    this.marsLeft = (this.marsExpect - this.marsYears);
-    this.jupiterLeft = (this.jupiterExpect - this.jupiterYears);
-    //removed the .toFIxed(2) from the end of these.
+
+  mercuryLeft() {
+    let mercuryLeft = this.mercuryExpect() - this.mercuryYears();
+    return mercuryLeft;
+  }
+  
+  venusLeft() {
+    let venusLeft = this.venusExpect() - this.venusYears();
+    return venusLeft;
+  }
+  
+  marsLeft() {
+    let marsLeft = this.marsExpect() - this.marsYears();
+    return marsLeft;
+  }
+  
+  jupiterLeft() {
+    let jupiterLeft = this.jupiterExpect() - this.jupiterYears();
+    return jupiterLeft;
   }
 }

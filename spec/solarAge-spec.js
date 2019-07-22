@@ -1,8 +1,5 @@
 import { UserAges } from './../src/planetYears.js';
 
-
-
-
 describe('UserAges', function () {
   //variables needed to get things running.
   var bDay = new Date(2000, 2, 2);
@@ -58,7 +55,7 @@ describe('UserAges', function () {
     let jupiterExpect = ages.jupiterExpect();
     expect(jupiterExpect).toEqual(80 / 11.86);
   });
-  
+  // start of lifetime left tests
   it('Should show remaining years left on earth', function() { //11
     let earthLeft = 80 - earthAge;
     expect(earthLeft).toEqual(61);
