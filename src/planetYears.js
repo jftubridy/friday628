@@ -10,7 +10,7 @@ export class UserAges {  // asigned but not used warning.
     let earthAge = currentYear - userYear;
     return earthAge;
   }
-
+  //solar ages
   mercuryYears(){
     let mercuryYears = this.userAge() / .24;
     return mercuryYears;
@@ -39,34 +39,28 @@ export class UserAges {  // asigned but not used warning.
   //   return mercuryYears, venusYears, marsYears, jupiterYears;
   // }
 
+  //solar life expectancy
+  mercuryExpect() {
+    let mercuryExpect = 80 / .24;
+    return mercuryExpect;
+  }
 
-  // mercuryExpect() {
-  //   let mercuryExpect = 80 / .24;
-  //   return mercuryExpect;
-  // }
-
-  // venusExpect() {
-  //   let venusExpect = 80 / .62;
-  //   return venusExpect;
-  // }
+  venusExpect() {
+    let venusExpect = 80 / .62;
+    return venusExpect;
+  }
   
-  // marsExpect() {
-  //   let marsExpect = 80 / 1.88;
-  //   return marsExpect;
-  // }
+  marsExpect() {
+    let marsExpect = 80 / 1.88;
+    return marsExpect;
+  }
   
-  // jupiterExpect() {
-  //   let jupiterExpect = 80 / 11.86;
-  //   return jupiterExpect;
-  // }
+  jupiterExpect() {
+    let jupiterExpect = 80 / 11.86;
+    return jupiterExpect;
+  }
   
-  // lifeExpectancy() {
-  //   this.earthExpect = 80;
-  //   this.mercuryExpect = (80 / .24);
-  //   this.venusExpect = (80 / .62);
-  //   this.marsExpect = (80 / 1.88);
-  //   this.jupiterExpect = (80 / 11.86);
-  // }
+  //solar time left
   earthLeft(){
     let earthLeft = ages.earthExpect - ages.earthAge;
     return earthLeft

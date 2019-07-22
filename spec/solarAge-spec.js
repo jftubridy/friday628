@@ -4,13 +4,12 @@ import { UserAges } from './../src/planetYears.js';
 
 
 describe('UserAges', function () {
-
+  //variables needed to get things running.
   var bDay = new Date(2000, 2, 2);
   let ages = new UserAges(bDay);
   let currentYear = new Date().getFullYear();
   let userYear = ages.bDay.getFullYear();
   let earthAge = currentYear - userYear;
-  //let earthAge = ages.userAge;
   
   it('should return ages year', function() {  //1
     expect(ages.bDay.getFullYear()).toEqual(2000);
@@ -19,7 +18,7 @@ describe('UserAges', function () {
   it('should return earthAge', function() {  //2
     expect(earthAge).toEqual(19);
   }); 
-
+  // start of 'solarAge' tests
   it('should return the correct mercuryYears', function() { //3
     let mercuryYears = ages.mercuryYears();
     expect(mercuryYears).toEqual(earthAge / .24);
@@ -39,7 +38,7 @@ describe('UserAges', function () {
     let jupiterYears = ages.jupiterYears();
     expect(jupiterYears).toEqual(earthAge / 11.86);
   });
-
+  //start of life expectancy tests
   it('should show expected lifetime on mercury', function() { //7
     let mercuryExpect = ages.mercuryExpect();
     expect(mercuryExpect).toEqual(80 / .24);
@@ -67,22 +66,22 @@ describe('UserAges', function () {
     
   it('Should show remaining years left on mercury', function() { //12
     let mercuryLeft = ages.mercuryExpect() - ages.mercuryYears();
-    expect(mercuryLeft).toEqual(256.166666666666666666);
+    expect(mercuryLeft).toEqual(254.16666666666669);
   });
       
   it('Should show remaining years left on venus', function() { //13
     let venusLeft = ages.venusExpect() - ages.venusYears();
-    expect(venusLeft).toEqual();
+    expect(venusLeft).toEqual(98.38709677419355);
   });
       
   it('Should show remaining years left on mars', function() { //14
     let marsLeft = ages.marsExpect() - ages.marsYears();
-    expect(marsLeft).toEqual();
+    expect(marsLeft).toEqual(32.4468085106383);
   });
       
   it('Should show remaining years left on jupiter', function() { //15
-    let jupiterLeft = ages.jupiterExpect() - ages.jupterYears();
-    expect(jupiterLeft).toEqual();
+    let jupiterLeft = ages.jupiterExpect() - ages.jupiterYears();
+    expect(jupiterLeft).toEqual(5.1433389544688035);
   });
   
 });
